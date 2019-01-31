@@ -1227,3 +1227,28 @@ Database : Philanthropists | database-philanthropists |
 </tr>
 </tbody>
 </table>
+|||
+home | home |
+<div id="carousel" style="width: 840px; position: relative; overflow: hidden; height: 221px;">
+<ul>
+<li class="show" style="display: inline; float: left; padding: 0px;"><img src="/public/site/iwi/c01.jpg" alt="Only one woman at the table" /></li>
+<li class="show" style="display: inline; float: left; padding: 0px;"><img src="/public/site/iwi/c02.jpg" alt="Home economics" /></li>
+<li class="show" style="display: inline; float: left; padding: 0px;"><img src="/public/site/iwi/c03.jpg" alt="Famous artists" /></li>
+<li class="show" style="display: inline; float: left; padding: 0px;"><img src="/public/site/iwi/c04.jpg" alt="The first female botanists" /></li>
+</ul>
+</div>
+<hr />
+<table style="width: 850px; align: center;">
+<tbody>
+<tr>
+<td><img src="/public/site/iwi/draft.jpg" alt="journal photo" width="309px" height="400px" /></td>
+<td width="50px"> </td>
+<td>
+<p style="font-size: 16px;">Idaho's Women of Influence is a project meant to correct an imbalance in the preserved historical data on women's contributions to Idaho history made up of two parts: a contribution-based database of influential women and a peer-reviewed journal of Idaho women's history. It is open to women connected to Idaho by birth, residence, work, or any other significant factor, whose positive efforts and accomplishments contributed significantly to quality of life in their community, the state or the world.</p>
+<hr />
+<p style="font-size: 16px;">Interested in contributing? Navigate to the <a href="/index.php/JIW/pages/view/submit">submit page</a> to post a submission to the database, or if you are interested in serving on the editorial board for the journal, or are interested in a future journal article, please contact <a href="mailto:idahowomenofinfluence@gmail.com">Mike Bullard</a> for more information.</p>
+</td>
+<td width="50px"> </td>
+</tr>
+</tbody>
+</table>
