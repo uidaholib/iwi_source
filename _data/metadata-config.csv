@@ -1,0 +1,11 @@
+field,display-name,dc-map,browse-link
+title,Name,DC.title 
+birth,Date of Birth,DC.date
+birth_place,Place of Birth
+death,Date of Death
+death_place,Place of Death
+keywords,Categories,DC.subject,true
+description,Description,DC.description
+resources,Resources
+contributor,Record Contributor
+oldlink,Old IWI Link

@@ -1,0 +1,46 @@
+---
+layout: page 
+---
+{% assign items = site.data[site.metadata] %}
+
+{{ content }}
+
+<div class="row mb-3 justify-content-center">
+    <div class="col-md-8 text-center">
+        <div class="input-group input-group-lg">
+            <input type="text" class="form-control form-control-lg" id="quickSearch" placeholder="Filter ... " > 
+            <div class="input-group-append">
+                <button class="btn btn-success" type="button" title="Search" alt="Search" id="goButton" >Search</button>
+                <a class="btn btn-outline-secondary filter" href="#" data-filter="">Reset</a>    
+            </div>
+        </div>
+        <span class="info2 h2"><span id="numberOf">{{ items | size }}</span> of {{ items | size }} items</span>
+    </div>
+</div>
+
+<div class="row" id="browseItems">
+    {% for item in items %}
+    <div class="item col-lg-4 col-md-6 col-sm-12 mb-2">
+        <div class="card" >
+            <a href="{{ '/women/' | absolute_url | append: item.objectid | append: '.html' }}">
+                <img class="card-img-top lazyload" data-original="{{ site.objects | append: '/' | append: item.image }}" alt="Image of {{ item.title | escape }}">           
+            </a>
+            <div class="card-body text-center search">
+                <h3 class="card-title"><a href="{{ '/women/' | absolute_url | append: item.objectid | append: '.html' }}" class="text-dark">{{ item.title }}</a></h3>
+                <p class="card-text">
+                    <strong>Born:</strong> {{ item.birth | date: '%B %e, %Y' }}, {{ item.birth_place }}.<br>
+                    {% if item.death %}<strong>Died:</strong> {{ item.death | date: '%B %e, %Y' }}, {{ item.death_place }}.<br>{% endif %}
+                    {% assign topics = item.keywords | split: ";" %}
+                    {% for t in topics %}
+                    <a class="btn btn-secondary m-1 filter" href="{{ t | strip | url_param_escape | prepend: '/browse.html#' | relative_url }}">{{ t | strip }}</a> 
+                    {% endfor %}
+                </p>
+                <p class="card-text text-left">{{ item.short_description }}</p>
+                <a href="{{ '/women/' | absolute_url | append: item.objectid | append: '.html' }}" class="btn btn-sm btn-info" title="link to {{ item.title | escape }}">View</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<p class="m-3">Would you like to submit a new entry or make corrections to the database? Please visit the <a href="{{ '/submit.html' | relative_url }}">submit page</a> for more information.</p>

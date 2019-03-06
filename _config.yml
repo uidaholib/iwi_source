@@ -1,0 +1,84 @@
+# Jekyll Digital Collection Generator
+
+# Note: use environment variable on build command to include analytics
+# JEKYLL_ENV=production jekyll build
+
+# Site settings
+# title appears in the header
+title: Idaho's Women of Influence
+# tagline appears in the header, should be short
+tagline: A database of important women in the history of the state of Idaho
+# description is for metadata tags
+# might appear in search result lists, keep around 160 characters max
+description: "A database of important women in the history of the state of Idaho" 
+# for metatags
+keywords: "UI; Idaho; women; history"
+# contact person
+email: ewilliamson@uidaho.edu
+collection-date: "2019"
+
+# images
+# give filename as it appears in "objects" dir (location given below)
+# banner-image appears in index header
+banner-image: c04.jpg
+banner-image-alt: women in hats
+home-title-y-padding: 2.5em
+# featured-image appears in meta tags
+# represents the collection in other aggregations
+featured-image: c04.jpg
+featured-image-alt: women in hats
+
+# Home page
+carousel-height: # in px, but don't include the "px"; default is 300.
+featured-subjects: #separate semi-colon(';') - if left blank, will be automatically generated to create top 5 subjects
+featured-subjects-max: 6 # set number of top subjects to display if auto generating
+featured-locations: University of Idaho; Sacramento, California; #separate by semi-colon(';') - if left blank, will be automatically generated to create top 5 locations
+featured-locations-max: 3
+
+browse-buttons: true
+
+# url variables
+# library's domain (only changed if using github pages)
+url: https://www.lib.uidaho.edu
+# location on the website, normally in /digital
+# e.g. /digital/hjccc
+baseurl: /digital/iwi
+# CDM collection alias
+collection-id: iwi
+# Objects dir location
+objects: https://www.lib.uidaho.edu/digital/objects/iwi
+
+# base url for our CDM server
+cdm-url: https://digital.lib.uidaho.edu
+# url to the shared assets folder on Digital
+digital-assets: https://www.lib.uidaho.edu/digital/assets
+
+# google-cse-id:
+
+# Theme Options
+
+# navbar text color
+# Choose from "navbar-light" for use with light background colors, or "navbar-dark" for dark background colors
+navbar-color: navbar-dark
+# navbar background color
+# Choose from bg-primary, bg-secondary, bg-success, bg-danger, bg-warning, bg-info, bg-light, bg-dark, bg-white
+navbar-background: bg-secondary
+# theme with Bootswatch (https://github.com/thomaspark/bootswatch)
+# Choose from: cerulean; cosmo; cyborg; darkly; flatly; journal; litera; lumen; lux; materia; minty; pulse; sandstone; simplex; sketchy; slate; solar; spacelab; superhero; united; yeti 
+bootswatch: # leave blank or comment out for plain bootstrap
+
+# Dev variables: 
+# choose metadata set, i.e. easily switch between full or dev version
+# be sure to also change page_gen data setting!
+metadata: iwi
+
+# collection display variables 
+# see _data/metadata-fields.csv
+
+# page gen settings https://github.com/avillafiorita/jekyll-datapage_gen
+page_gen:
+  - data: 'iwi'
+    template: 'items'
+    name: 'objectid'
+    dir: 'women'
+    extension: 'html'    

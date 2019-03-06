@@ -1,0 +1,23 @@
+<script src="{{ '/datatables/datatables.min.js' | prepend: site.digital-assets }}"></script>
+<script>
+    /* use jquery to initialize DataTables and load collection data */
+    $(document).ready(function() {
+        $('#item-table').DataTable( {
+            // use DataTables ajax load 
+            ajax: { url: '{{ "/data/metadata.json" | relative_url }}', dataSrc: 'women' },
+            // get the data from the metadata.json
+            columns: [ { data: 'name' }, { data: 'born' }, { data: 'died' }, { data: 'categories' }, { data: 'link' } ],
+            columnDefs: [ 
+                // combine link and title for first column
+                { "render": function ( data, type, row ) { return '<a href="' + row.link +'">'+ data +'</a>'; },"targets": 0 },
+                // hide the link column
+                { "visible": false,  "targets": [ 4 ] }
+            ],
+            // sort based on the date
+            order: [[ 1, "asc" ]],
+            // add download features
+            dom: 'Blfrtip', 
+            buttons: [ 'excelHtml5', 'csvHtml5' ]
+        });
+    });
+</script>

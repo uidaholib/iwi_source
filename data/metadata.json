@@ -1,0 +1,16 @@
+---
+# metadata for table ajax
+---
+{%- assign items = site.data[site.metadata] -%}
+{ "women": [
+    {%- for item in items -%}
+    {
+        "name": {{ item.title | jsonify }},
+        "born": {{ item.birth | append: ', ' | append: item.birth_place | jsonify }},
+        "died": {{ item.death | append: ', ' | append: item.death_place | jsonify }},
+        "categories": {{ item.keywords | split: ";" | join: ", " | jsonify }},
+        "description": {{ item.short_description | jsonify }},
+        "link": {{ "/women/" | absolute_url | append: item.objectid | append: ".html" | jsonify }}
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+] }
