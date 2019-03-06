@@ -3,8 +3,42 @@ layout: home-page
 title: Home
 ---
 
-Idaho's Women of Influence is a project meant to correct an imbalance in the preserved historical data on women's contributions to Idaho history made up of two parts: a contribution-based database of influential women and a peer-reviewed journal of Idaho women's history. 
-It is open to women connected to Idaho by birth, residence, work, or any other significant factor, whose positive efforts and accomplishments contributed significantly to quality of life in their community, the state or the world.
+<div class="row">
+    <div class="col-md-8">
 
-Interested in contributing? 
-Navigate to the <a href="/index.php/JIW/pages/view/submit">submit page</a> to post a submission to the database, or if you are interested in serving on the editorial board for the journal, or are interested in a future journal article, please contact <a href="mailto:idahowomenofinfluence@gmail.com">Mike Bullard</a> for more information.
+        <div class="card mb-3">
+            <div class="card-body">
+                <h4 class="card-title">Idaho's Women of Influence is a project meant to correct an imbalance in the preserved historical data on women's contributions to Idaho history.</h4>
+                <p class="card-text">
+                    IWI is open to women connected to Idaho by birth, residence, work, or any other significant factor, whose positive efforts and accomplishments contributed significantly to quality of life in their community, the state, or the world.
+                    The collection provides vetted, publicly available descriptions and resources: <a href="{{ '/browse.html' | relative_url }}">browse the biographies</a> to explore Idaho history or <a href="{{ '/data/' | relative_url }}">download the metadata</a> to jump start new projects.
+                </p>
+                <a class="btn btn-lg btn-garnet" href="{{ '/about.html' | relative_url }}" role="button">Learn More About IWI &raquo;</a>
+            </div>
+        </div>
+
+        {% include index/carousel.html %}
+
+    </div>
+    <div class="col-md-4">
+
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">Browse by:</h5>
+                {%- assign subjects = "Politician;Artist;Author;Educator;Pioneer;Philanthropist;Medical Practitioner;Actress;Photographer;Librarian;Publisher;Musician;Promoter" | split: ";" -%}
+                <p>
+                {% for s in subjects %}
+                <a class="btn btn-lg btn-payette-blue m-1" href="{{ s | strip | url_param_escape | prepend: '/browse.html#' | absolute_url }}">{{ s | strip }}</a>{% endfor %}
+                </p>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-body">
+                <h4 class="card-title">IWI currently contains <a href="{{ '/data/' | relative_url }}">{{ site.data.iwi | size }}</a> profiles of Idaho women.</h4>
+            </div>
+        </div>
+
+    </div>
+
+</div>
