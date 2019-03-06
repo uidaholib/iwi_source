@@ -5,7 +5,7 @@
 { "women": [
     {%- for item in items -%}
     {
-        "name": {{ item.title | jsonify }},
+        "name": {{ item.fullname | jsonify }},
         "born": {{ item.birth | append: ', ' | append: item.birth_place | jsonify }},
         "died": {{ item.death | append: ', ' | append: item.death_place | jsonify }},
         "categories": {{ item.keywords | split: ";" | join: ", " | jsonify }},

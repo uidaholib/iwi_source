@@ -1,5 +1,5 @@
 field,display-name,dc-map,browse-link
-title,Name,DC.title 
+name,Name,DC.title 
 birth,Date of Birth,DC.date
 birth_place,Place of Birth
 death,Date of Death

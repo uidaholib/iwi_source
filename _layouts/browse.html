@@ -23,10 +23,10 @@ layout: page
     <div class="item col-lg-4 col-md-6 col-sm-12 mb-2">
         <div class="card" >
             <a href="{{ '/women/' | absolute_url | append: item.objectid | append: '.html' }}">
-                <img class="card-img-top lazyload" data-original="{{ site.objects | append: '/' | append: item.image }}" alt="Image of {{ item.title | escape }}">           
+                <img class="card-img-top lazyload" data-original="{{ site.objects | append: '/' | append: item.image }}" alt="Image of {{ item.fullname | escape }}">           
             </a>
             <div class="card-body text-center search">
-                <h3 class="card-title"><a href="{{ '/women/' | absolute_url | append: item.objectid | append: '.html' }}" class="text-dark">{{ item.title }}</a></h3>
+                <h3 class="card-title"><a href="{{ '/women/' | absolute_url | append: item.objectid | append: '.html' }}" class="text-dark">{{ item.fullname }}</a></h3>
                 <p class="card-text">
                     <strong>Born:</strong> {{ item.birth | date: '%B %e, %Y' }}, {{ item.birth_place }}.<br>
                     {% if item.death %}<strong>Died:</strong> {{ item.death | date: '%B %e, %Y' }}, {{ item.death_place }}.<br>{% endif %}
@@ -36,7 +36,7 @@ layout: page
                     {% endfor %}
                 </p>
                 <p class="card-text text-left">{{ item.short_description }}</p>
-                <a href="{{ '/women/' | absolute_url | append: item.objectid | append: '.html' }}" class="btn btn-sm btn-info" title="link to {{ item.title | escape }}">View</a>
+                <a href="{{ '/women/' | absolute_url | append: item.objectid | append: '.html' }}" class="btn btn-sm btn-info" title="link to {{ item.fullname | escape }}">View</a>
             </div>
         </div>
     </div>

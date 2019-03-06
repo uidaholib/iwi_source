@@ -5,18 +5,18 @@ gallery: true
 {%- assign fields = site.data.metadata-config -%}
 <div class="container py-3">
     <ul class="breadcrumb">
-        <li class="breadcrumb-item"><a href="{{ '/' | absolute_url }}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ '/' | absolute_url }}">IWI</a></li>
         <li class="breadcrumb-item"><a href="{{ '/browse.html' | absolute_url }}">Women</a></li>
-        <li class="breadcrumb-item active">{{ page.title | truncatewords: 10 }}</li>
+        <li class="breadcrumb-item active">{{ page.fullname | truncatewords: 10 }}</li>
     </ul>
 
-    <h1>{{ page.title }}</h1>
+    <h1>{{ page.fullname }}</h1>
 
     <div class="row">
 
         <div class="col-md-4" >
             <div class="card mb-2">
-                <img src="{{ site.objects | append: '/' | append: page.image }}" alt="Image of {{ page.title }}" class="card-img-top">
+                <img src="{{ site.objects | append: '/' | append: page.image }}" alt="Image of {{ page.fullname }}" class="card-img-top">
                 <div class="card-body">
                     <p class="card-text">
                         <strong>Born:</strong> {{ page.birth | date: '%B %e, %Y' }}, {{ page.birth_place }}.<br>
@@ -59,7 +59,7 @@ gallery: true
                 <div class="card-body">
                     <dl>
                         <dt>Preferred Citation:</dt> 
-                        <dd>{{ page.title }}, {{ site.title }}, Digital Initiatives, University of Idaho Library, {{ page.url | absolute_url }}</dd>
+                        <dd>{{ page.fullname }}, {{ site.title }}, Digital Initiatives, University of Idaho Library, {{ page.url | absolute_url }}</dd>
                         <dt>Record Contributor:</dt>
                         <dd>{{ page.contributor }}</dd>
                         <dt>Old IWI Link</dt>

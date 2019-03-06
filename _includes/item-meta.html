@@ -4,7 +4,7 @@
 <!-- DC meta -->
 <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
 <link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
-<meta name="DC.title" content="{{ page.title | xml_escape }}" xml:lang="en" />
+<meta name="DC.title" content="{{ page.fullname | xml_escape }}" xml:lang="en" />
 <meta name="DC.creator" content="{{ page.creator | xml_escape }}" xml:lang="en" />
 <meta name="DCTERMS.created" content="{{ page.date | xml_escape }}" xml:lang="en" scheme="DCTERMS.W3CDTF" />
 <meta name="DC.description" content="{{ page.description | truncatewords: 25 | xml_escape  }}" xml:lang="en" />
@@ -12,7 +12,7 @@
 {% endfor %}
 <meta name="DC.type" content="{{ page.type | xml_escape }}" xml:lang="en" />
 <!-- Open Graph meta -->
-<meta property="og:title" content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}" />
+<meta property="og:title" content="{% if page.fullname %}{{ page.fullname | escape }}{% else %}{{ site.title | escape }}{% endif %}" />
 <meta property="og:type" content="article" />
 <meta property="og:description" content="Research document from the Idaho Waters Digital Library. {{ page.description | truncatewords: 25 }}" />
 <meta property="og:image" content="{{ site.objects | append: '/small/' | append: page.objectid | append: '_sm.jpg' }}" />
@@ -24,7 +24,7 @@
 { 
     "@context": "http://schema.org",
     "@type": "ScholarlyArticle",
-    "headline": {{ page.title | jsonify }},
+    "headline": {{ page.fullname | jsonify }},
     "author": [ {% assign authors = page.creator | split: ";" %}{% for author in authors %}{{ author | strip | jsonify }}{% unless forloop.last %}, {% endunless %}{% endfor %} ],
     "datePublished": {{ page.date | jsonify }},
     "description": {{ page.description | truncatewords: 28 | jsonify }},
@@ -35,4 +35,4 @@
 }
 </script> 
 <!-- breadcrumbs schema -->
-<script type="application/ld+json">{"@context": "http://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@id": "{{ "/" | absolute_url }}", "name": "{{ site.title }}", "image": "{{ site.featured-image | prepend: "/" | prepend: site.objects }}" } },{ "@type": "ListItem", "position": 2, "item": { "@id": "{{ "/data/" | absolute_url }}", "name": "Documents" } },{ "@type": "ListItem", "position": 3, "item": { "@id": "{{ page.url | absolute_url }}", "name": "{{ page.title }}", "image": "{{ page.objectid | append: "_sm.jpg" | prepend: site.objects }}" } }] }</script>
+<script type="application/ld+json">{"@context": "http://schema.org", "@type": "BreadcrumbList", "itemListElement": [{ "@type": "ListItem", "position": 1, "item": { "@id": "{{ "/" | absolute_url }}", "name": "{{ site.title }}", "image": "{{ site.featured-image | prepend: "/" | prepend: site.objects }}" } },{ "@type": "ListItem", "position": 2, "item": { "@id": "{{ "/data/" | absolute_url }}", "name": "Documents" } },{ "@type": "ListItem", "position": 3, "item": { "@id": "{{ page.url | absolute_url }}", "name": "{{ page.fullname }}", "image": "{{ page.objectid | append: "_sm.jpg" | prepend: site.objects }}" } }] }</script>
