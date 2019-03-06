@@ -15,8 +15,10 @@ Idaho's Women of Influence is meant to correct an imbalance in the preserved his
 Started in 2014, IWI was the vision of researchers Annie Gaines and Mike Bullard, and first implemented on [Open Journal Systems](https://pkp.sfu.ca/ojs/) at [University of Idaho Library](https://www.lib.uidaho.edu/) (see [archived IWI site](https://web.archive.org/web/20141127194855/http://journals.lib.uidaho.edu/index.php/IWI/index)). 
 Originally intended as both a database of important women in the history of the state of Idaho and the home for a peer-reviewed scholarly journal on the same topic, Idaho's Women of Influence is open to all women connected to Idaho by birth, residence, work, or any other significant factor whose positive efforts and accomplishments contributed significantly to the quality of life in their community, the state, or the world. 
 
-However, after staffing changes and migrating off older versions of OJS, the original version became unmaintained. 
+However, after changes to infrastructure and staffing, the unmaintained original version became inaccessible. 
 **This version preserves the original content and provides the opportunity to add new entries.**
+
+<img src="{{ '/iwi_logo.jpg' | prepend: site.objects }}" class="img-fluid d-block mx-auto">
 
 Database entries may be submitted online by librarians, educators, museum staff, tribal authorities, women's organizations, or others researching this area.
 Each entry must be accompanied by one to five published or otherwise publicly available sources of information. 
