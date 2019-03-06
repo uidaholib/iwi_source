@@ -3,18 +3,29 @@ title: About
 layout: page
 permalink: /about.html
 # add image to index page bootstrap jumbotron
-featured-image: "objects/test001.jpg"
+featured-image: "c04.jpg"
 ---
 
 # About Idaho's Women of Influence
 
-Idaho's Women of Influence is meant to correct an imbalance in the preserved historical data on women's contribution to Idaho history. Both a database of important women in the history of the state of Idaho and the home for a peer-reviewed scholarly journal on the same topic, Idaho's Women of Influence is open to all women connected to Idaho by birth, residence, work, or any other significant factor whose positive efforts and accomplishments contributed significantly to the quality of life in their community, the state, or the world. 
+Idaho's Women of Influence is meant to correct an imbalance in the preserved historical data on women's contribution to Idaho history.
 
-<img style="display: block; margin-left: auto; margin-right: auto;" src="/public/site/iwi/c04.jpg" alt="" width="840" height="221" />
+<img src="{{ '/c04.jpg' | prepend: site.objects }}" class="img-fluid w-100">
 
-Database entries may be submitted online by librarians, educators, museum staff, tribal authorities, women's organizations, or others with recognizable positions, credentials, or knowledge. Each entry must be accompanied by one to five published or otherwise publicly available sources of information. Contributors to the database are also encouraged to create or update wikipedia articles on the women as well.
-Once an editorial board is in place, longer articles may be submitted for review.
+Started in 2014, IWI was the vision of researchers Annie Gaines and Mike Bullard, and first implemented on [Open Journal Systems](https://pkp.sfu.ca/ojs/) at [University of Idaho Library](https://www.lib.uidaho.edu/). 
+Originally intended as both a database of important women in the history of the state of Idaho and the home for a peer-reviewed scholarly journal on the same topic, Idaho's Women of Influence is open to all women connected to Idaho by birth, residence, work, or any other significant factor whose positive efforts and accomplishments contributed significantly to the quality of life in their community, the state, or the world. 
 
-<strong>Disclaimer:</strong> While an effort is made to ensure that all information is responsibly and accurately contributed, it is not possible for the publishers to check every fact. This database is meant to grow into a broad starting point for research about this individuals and their lives. Users should check facts and report mistakes, or provide additional information and resources when available.
+However, after staffing changes and migrating off older versions of OJS, the original version became unmaintained. 
+**This version preserves the original content and provides the opportunity to add new entries.**
 
-Interested in contributing? Navigate to the <a href="/index.php/JIW/pages/view/submit">submit page</a> to post a submission to the database, or if you are interested in serving on the editorial board for the journal, or are interested in submitting a future journal article, please contact <a href="mailto:idahowomenofinfluence@gmail.com">Mike Bullard</a> for more information.
+Database entries may be submitted online by librarians, educators, museum staff, tribal authorities, women's organizations, or others researching this area.
+Each entry must be accompanied by one to five published or otherwise publicly available sources of information. 
+Contributors to the database are also encouraged to create or update [Wikipedia](https://www.wikipedia.org/) articles on the women as well.
+
+**Disclaimer:** 
+*While an effort is made to ensure that all information is responsibly and accurately contributed, it is not possible for the publishers to check every fact.
+This database is meant to grow into a broad starting point for research about these individuals and their lives.
+Users should check facts and report mistakes, or provide additional information and resources when available.*
+
+**Interested in contributing?**
+Visit the [submit page]({{ '/submit.html' | relative_url }}) to learn more.
