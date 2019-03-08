@@ -19,8 +19,8 @@ gallery: true
                 <img src="{{ site.objects | append: '/' | append: page.image }}" alt="Image of {{ page.fullname }}" class="card-img-top">
                 <div class="card-body">
                     <p class="card-text">
-                        <strong>Born:</strong> {{ page.birth | date: '%B %e, %Y' }}, {{ page.birth_place }}.<br>
-                        {% if page.death %}<strong>Died:</strong> {{ page.death | date: '%B %e, %Y' }}, {{ page.death_place }}.<br>{% endif %}
+                        <strong>Born:</strong> {% if page.birth contains '-' %}{{ page.birth | date: '%B %e, %Y' }}{% else %}{{ page.birth }}{% endif %}, {{ page.birth_place }}.<br>
+                        {% if page.death %}<strong>Died:</strong> {% if page.death contains '-' %}{{ page.death | date: '%B %e, %Y' }}{% else %}{{ page.death }}{% endif %}, {{ page.death_place }}.<br>{% endif %}
                         {% assign topics = page.keywords | split: ";" %}
                         {% for t in topics %}
                         <a class="btn btn-secondary m-1 filter" href="{{ t | strip | url_param_escape | prepend: '/browse.html#' | relative_url }}">{{ t | strip }}</a> 

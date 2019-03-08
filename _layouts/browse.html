@@ -28,8 +28,8 @@ layout: page
             <div class="card-body text-center search">
                 <h3 class="card-title"><a href="{{ '/women/' | absolute_url | append: item.objectid | append: '.html' }}" class="text-dark">{{ item.fullname }}</a></h3>
                 <p class="card-text">
-                    <strong>Born:</strong> {{ item.birth | date: '%B %e, %Y' }}, {{ item.birth_place }}.<br>
-                    {% if item.death %}<strong>Died:</strong> {{ item.death | date: '%B %e, %Y' }}, {{ item.death_place }}.<br>{% endif %}
+                    <strong>Born:</strong> {% if item.birth contains '-' %}{{ item.birth | date: '%B %e, %Y' }}{% else %}{{ item.birth }}{% endif %}, {{ item.birth_place }}.<br>
+                    {% if item.death %}<strong>Died:</strong> {% if item.death contains '-' %}{{ item.death | date: '%B %e, %Y' }}{% else %}{{ item.death }}{% endif %}, {{ item.death_place }}.<br>{% endif %}
                     {% assign topics = item.keywords | split: ";" %}
                     {% for t in topics %}
                     <a class="btn btn-secondary m-1 filter" href="{{ t | strip | url_param_escape | prepend: '/browse.html#' | relative_url }}">{{ t | strip }}</a> 
