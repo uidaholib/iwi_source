@@ -51,7 +51,7 @@ objects: https://www.lib.uidaho.edu/digital/objects/iwi
 # base url for our CDM server
 cdm-url: https://digital.lib.uidaho.edu
 # url to the shared assets folder on Digital
-digital-assets: https://www.lib.uidaho.edu/digital/assets
+digital-assets: https://www.lib.uidaho.edu/assets
 
 # google-cse-id:
 
