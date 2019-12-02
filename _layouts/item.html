@@ -16,7 +16,9 @@ gallery: true
 
         <div class="col-md-4" >
             <div class="card mb-2">
+                {% if page.image %}
                 <img src="{{ site.objects | append: '/' | append: page.image }}" alt="Image of {{ page.fullname }}" class="card-img-top">
+                {% endif %}
                 <div class="card-body">
                     <p class="card-text">
                         <strong>Born:</strong> {% if page.birth contains '-' %}{{ page.birth | date: '%B %e, %Y' }}{% else %}{{ page.birth }}{% endif %}, {{ page.birth_place }}.<br>
