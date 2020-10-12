@@ -1,0 +1,16 @@
+######
+fullname: {{ page.fullname }}
+birth: {{ page.birth }}
+birth_place: {{ page.birth_place }}
+death: {{ page.death }}
+death_place: {{ page.death_place }}
+keywords: {{ page.keywords }}
+image: {{ page.image }}
+short_description: {{ page.short_description }}
+resources: {% assign res = page.resources | split: "|" %}{% for r in res %}
+    - {{ r | jsonify }}{% endfor %}
+contributor: {{ page.contributor }}
+oldlink: {{ page.oldlink }}
+######
+
+{{ page.description }}
