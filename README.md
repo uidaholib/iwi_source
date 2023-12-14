@@ -1,7 +1,9 @@
 # iwi_source
 
-Current version is in [collectionbuilder-csv-template](https://github.com/uidaholib/collectionbuilder-csv-template) iwi branch!
+Current version is in base-digital-collections-template iwi branch!
 Please work there unless project is rebooted.
+
+<https://www.lib.uidaho.edu/digital/iwi/>
 
 Idaho Women of Influence project
 
